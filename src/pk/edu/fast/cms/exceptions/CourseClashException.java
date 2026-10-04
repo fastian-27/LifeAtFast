@@ -6,5 +6,7 @@ package pk.edu.fast.cms.exceptions;
 public class CourseClashException extends CampusException {
     public CourseClashException(String message) {
         super(message);
+        // further logic..
     }
+
 }

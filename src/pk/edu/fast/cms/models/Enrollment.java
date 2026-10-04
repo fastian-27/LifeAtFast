@@ -1,5 +1,11 @@
 package pk.edu.fast.cms.models;
-// STUB FOR PERSON C
+
+import pk.edu.fast.cms.users.Student;
+
 public class Enrollment {
-    /* Person C will implement enrollmentId, student, section, status, etc. */
-}
+        private Student student;
+        private Section section;
+        public Enrollment(Student student, Section section) { this.student = student; this.section = section; }
+        public Student getStudent() { return student; }
+        public Section getSection() { return section; }
+    }

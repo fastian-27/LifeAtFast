@@ -23,16 +23,17 @@ public class Course {
         this.sections = new ArrayList<>();
     }
 
+    public void update(String title, int creditHours) { this.title = title; this.creditHours = creditHours; }
+
     /**
      * Adds a prerequisite course.
      * @param course The course required before taking this one.
      */
     public void addPrerequisite(Course course) {
-        if (course != null && !this.equals(course)) {
+        if (course != null && !this.equals(course)) {  // simple checks...
             this.prerequisites.add(course);
         }
     }
-
     /**
      * Links a section to this course.
      */
@@ -41,11 +42,11 @@ public class Course {
             this.sections.add(section);
         }
     }
-
-    // --- Getters & Setters ---
+    @Override public String toString() { return courseCode + " - " + title; }
     public String getCourseCode() { return courseCode; }
     public String getTitle() { return title; }
     public int getCreditHours() { return creditHours; }
     public Set<Course> getPrerequisites() { return prerequisites; }
     public List<Section> getSections() { return sections; }
 }
+

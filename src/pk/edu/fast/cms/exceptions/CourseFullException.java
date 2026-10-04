@@ -6,5 +6,7 @@ package pk.edu.fast.cms.exceptions;
 public class CourseFullException extends CampusException {
     public CourseFullException(String message) {
         super(message);
+
+        // further here.
     }
 }

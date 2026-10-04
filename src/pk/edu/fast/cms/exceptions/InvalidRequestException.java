@@ -6,5 +6,6 @@ package pk.edu.fast.cms.exceptions;
 public class InvalidRequestException extends CampusException {
     public InvalidRequestException(String message) {
         super(message);
+        // adding further details
     }
 }
